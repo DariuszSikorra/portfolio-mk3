@@ -1,0 +1,33 @@
+.app__nav {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .nav__item {
+    font-size: 1.4rem;
+    font-weight: 900;
+    height: 60px;
+    position: relative;
+    .item__number,
+    .item__text {
+      display: flex;
+      border: 2px solid black;
+      width: 40px;
+      height: 28px;
+      border-radius: 8px;
+      align-items: center;
+    }
+    .item__number {
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+      padding-right: 40px;
+    }
+    .item__text {
+      width: 140px;
+      padding: 0 50px 0 20px;
+      background: white;
+    }
+  }
+}
