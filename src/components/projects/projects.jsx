@@ -1,4 +1,5 @@
 import React from "react";
+import "./projects.scss"
 
 const Projects = () => {
   return (
@@ -6,9 +7,15 @@ const Projects = () => {
       <div className="main__textContainer main__textContainer--projects">
         <h1>Projects</h1>
         <p>
-          I am currently involved in the creation of JS and free API based
-          projects. In the meantime, I also create applications witch use React
-          components.
+          I write frontend applications in the React.js environment, using the
+          latest solutions. I use libraries such as react-router-dom,
+          react-spring and many others (depending on the given project). I am
+          currently learning to implement technologies such as:
+          <ul> 
+            <li>Typescript</li>
+            <li>GraphQl</li>
+            <li>Redux</li>
+          </ul>
         </p>
       </div>
       <div className="main__photoContainer main__photoContainer--projects"></div>
