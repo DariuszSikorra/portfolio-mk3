@@ -23,11 +23,14 @@
       overflow: hidden;
       position: absolute;
       padding-right: 40px;
+      z-index: 3;
     }
     .item__text {
+      position: relative;
       width: 140px;
       padding: 0 80px 0 20px;
       background: white;
+      z-index: 2;
     }
   }
 }

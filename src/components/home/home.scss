@@ -1,0 +1,35 @@
+@media (max-width: calc(768px)) {
+  .main__textContainer--home {
+    h1 {
+    }
+    p {
+      .title__spiningLogo {
+        margin: 40px;
+        max-width: 40vw;
+        animation: spin 12s linear infinite;
+      }
+    }
+  }
+}
+
+@media (min-width: calc(768px + 1px)) {
+  .main__textContainer--home {
+    h1 {
+    }
+    p {
+      .title__spiningLogo {
+        margin: 40px;
+        animation: spin 12s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

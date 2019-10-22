@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavButton from "./navButton/navButton"
+import NavButton from "./navButton/navButton";
 
 import { routes } from "../../assets/routes";
 

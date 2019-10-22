@@ -1,9 +1,10 @@
 import React from "react";
-import "./contact.scss"
+import "./contact.scss";
 
-import linkedInRound from "../../assets/contactIcons/linkedInRound.svg"
-import githubRound from "../../assets/contactIcons/githubRound.svg"
-import mailRound from "../../assets/contactIcons/mailRound.svg"
+import linkedInRound from "../../assets/contactIcons/linkedInRound.svg";
+import githubRound from "../../assets/contactIcons/githubRound.svg";
+import mailRound from "../../assets/contactIcons/mailRound.svg";
+import contact from "../../assets/images/contact.jpg";
 
 const Contact = () => {
   return (
@@ -15,32 +16,20 @@ const Contact = () => {
           <table>
             <tr>
               <th>
-                <a>
-                  <img
-                    src={mailRound}
-                    alt="email"
-                    height="40px"
-                    width="40px"
-                    srcset=""
-                  />
-                </a>
+                <div>
+                  <img src={mailRound} alt="email" />
+                </div>
               </th>
               <th>
-                <a>
+                <div>
                   <span>dariusz.sikorra@gmail.com</span>
-                </a>
+                </div>
               </th>
             </tr>
             <tr>
               <th>
                 <a href="https://www.linkedin.com/in/dariuszsikorra">
-                  <img
-                    src={linkedInRound}
-                    alt="linkedin"
-                    height="40px"
-                    width="40px"
-                    srcset=""
-                  />
+                  <img src={linkedInRound} alt="linkedin" />
                 </a>
               </th>
               <th>
@@ -52,13 +41,7 @@ const Contact = () => {
             <tr>
               <th>
                 <a id="link" href="https://github.com/DariuszSikorra">
-                  <img
-                    src={githubRound}
-                    alt="github"
-                    height="40px"
-                    width="40px"
-                    srcset=""
-                  />
+                  <img src={githubRound} alt="github" />
                 </a>
               </th>
               <th>
@@ -70,7 +53,9 @@ const Contact = () => {
           </table>
         </p>
       </div>
-      <div className="main__photoContainer main__photoContainer--contact"></div>
+      <div className="main__photoContainer main__photoContainer--contact">
+        <img src={contact} alt="" />
+      </div>
     </>
   );
 };

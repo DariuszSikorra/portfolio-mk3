@@ -1,59 +1,149 @@
-.main__textContainer--technologies {
-  p {
-    table {
-      margin: auto;
-      tr {
-        th {
-          border-bottom: 2px solid black;
-          padding: 0.3em;
+@media (max-width: calc(768px)) {
+  .main__textContainer--technologies {
+    p {
+      table {
+        margin: auto;
+        tr {
+          th {
+            border-bottom: 2px solid black;
+            padding: 0.3em;
+          }
         }
+      }
+    }
+  }
+  .main__photoContainer--technologies {
+    height: 100%;
+    display: flex;
+
+    @mixin on-circle($item-count, $circle-size, $item-size) {
+      position: relative;
+      width: $circle-size;
+      height: $circle-size;
+      list-style: none;
+
+      > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $item-size;
+        height: $item-size;
+        margin: -($item-size / 2);
+
+        $angle: (360 / $item-count);
+        $rot: 0;
+
+        @for $i from 1 through $item-count {
+          &:nth-of-type(#{$i}) {
+            transform: rotate($rot * 1deg)
+              translate($circle-size / 2)
+              rotate($rot * -1deg);
+          }
+
+          $rot: $rot + $angle;
+        }
+      }
+    }
+    .circle-container {
+      align-content: center;
+      margin: auto;
+      animation: spin 30s linear infinite;
+      @include on-circle($item-count: 9, $circle-size: 12em, $item-size: 3em);
+
+      img {
+        display: block;
+        max-width: 100%;
+        transition: 0.15s;
+        width: 3em;
+        height: 3rem;
+        border: 0 !important;
+        border-radius: 0 !important;
+        animation: spin-reverse 30s linear infinite;
       }
     }
   }
 }
-.main__photoContainer--technologies {
-  height: 100%;
-  display: flex;
 
-  @mixin on-circle($item-count, $circle-size, $item-size) {
-    position: relative;
-    width: $circle-size;
-    height: $circle-size;
-    list-style: none;
-
-    > * {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: $item-size;
-      height: $item-size;
-      margin: -($item-size / 2);
-
-      $angle: (360 / $item-count);
-      $rot: 0;
-
-      @for $i from 1 through $item-count {
-        &:nth-of-type(#{$i}) {
-          transform: rotate($rot * 1deg)
-            translate($circle-size / 2)
-            rotate($rot * -1deg);
+@media (min-width: calc(768px + 1px)) {
+  .main__textContainer--technologies {
+    p {
+      table {
+        margin: auto;
+        tr {
+          th {
+            border-bottom: 2px solid black;
+            padding: 0.3em;
+          }
         }
-
-        $rot: $rot + $angle;
       }
     }
   }
-  .circle-container {
-    align-content: center;
-    margin: auto;
-    @include on-circle($item-count: 9, $circle-size: 24em, $item-size: 6em);
+  .main__photoContainer--technologies {
+    height: 100%;
+    display: flex;
 
-    img {
-      display: block;
-      max-width: 100%;
-      transition: 0.15s;
-      width: 6em;
-      height: 6rem;
+    @mixin on-circle($item-count, $circle-size, $item-size) {
+      position: relative;
+      width: $circle-size;
+      height: $circle-size;
+      list-style: none;
+
+      > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $item-size;
+        height: $item-size;
+        margin: -($item-size / 2);
+
+        $angle: (360 / $item-count);
+        $rot: 0;
+
+        @for $i from 1 through $item-count {
+          &:nth-of-type(#{$i}) {
+            transform: rotate($rot * 1deg)
+              translate($circle-size / 2)
+              rotate($rot * -1deg);
+          }
+
+          $rot: $rot + $angle;
+        }
+      }
     }
+    .circle-container {
+      align-content: center;
+      margin: auto;
+      animation: spin 30s linear infinite;
+      @include on-circle($item-count: 9, $circle-size: 24em, $item-size: 6em);
+
+      img {
+        display: block;
+        max-width: 100%;
+        transition: 0.15s;
+        width: 6em;
+        height: 6rem;
+        border-radius: 0 !important;
+        animation: spin-reverse 30s linear infinite;
+      }
+    }
+  }
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
   }
 }

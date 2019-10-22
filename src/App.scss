@@ -1,9 +1,20 @@
-.app {
-  display: grid;
-  grid-template-columns: 1fr 40px;
-  grid-template-rows: 1fr;
-  overflow: hidden;
-  background-color: white;
-  height: 100vh;
-  width: 100vw;
+@media (max-width: calc(768px)) {
+  .app {
+    display: grid;
+    grid-template-columns: 1fr 8vw;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    min-height: 120vh;
+    width: 100vw;
+  }
+}
+@media (min-width: calc(768px + 1px)) {
+  .app {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100vw;
+  }
 }

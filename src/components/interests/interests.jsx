@@ -1,4 +1,5 @@
 import React from "react";
+import interests from "../../assets/images/interests.jpg"
 
 const Interests = () => {
   return (
@@ -12,7 +13,9 @@ const Interests = () => {
           admire the views and put myself on more and more difficult challenges.
         </p>
       </div>
-      <div className="main__photoContainer main__photoContainer--interests"></div>
+      <div className="main__photoContainer main__photoContainer--interests">
+        <img src={interests} alt=""/>
+      </div>
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React from "react";
 import "./projects.scss"
 
+import projects from "../../assets/images/projects.jpg"
+
 const Projects = () => {
   return (
     <>
@@ -18,7 +20,9 @@ const Projects = () => {
           </ul>
         </p>
       </div>
-      <div className="main__photoContainer main__photoContainer--projects"></div>
+      <div className="main__photoContainer main__photoContainer--projects">
+        <img src={projects} alt=""/>
+      </div>
     </>
   );
 };

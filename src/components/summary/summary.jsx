@@ -1,4 +1,6 @@
 import React from "react";
+import "./summary.scss"
+import pg from "../../assets/images/pg.jpg"
 
 const Summary = () => {
   return (
@@ -15,7 +17,9 @@ const Summary = () => {
           developer using the <strong>latest</strong> technologies.
         </p>
       </div>
-      <div className="main__photoContainer main__photoContainer--summary"></div>
+      <div className="main__photoContainer main__photoContainer--summary">
+        <img src={pg} alt="Gdańsk University of Technology" />
+      </div>
     </>
   );
 };
