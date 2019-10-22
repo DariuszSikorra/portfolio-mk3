@@ -1,14 +1,14 @@
 ## `Work in progress!`
 
-##Check it out!
-[Portfolio]()
+## Check it out!
+[Portfolio](https://dariuszsikorra.github.io/portfolio-mk3/)
 
 ## About
 
 That's the latest version of my portfolio.
 Finally, I decided to do a react portfolio with a responsive interface.
 
-##Libriaries and dependencies:
+## Libriaries and dependencies:
 
 -[React.js](https://reactjs.org) with create-react-app as the main js library,<br/>
 -[React-router](https://reacttraining.com/react-router/web/guides/quick-start) for a smooth transition between components,<br/>
