@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 
 import "./App.scss";
@@ -31,12 +31,12 @@ function App() {
   });
 
   return (
-    <HashRouter basename="/">
+    <Router basename={process.env.PUBLIC_URL}>
       <a.div className="app" style={bgAnimation}>
         <Navigation />
         <Main />
       </a.div>
-    </HashRouter>
+    </Router>
   );
 }
 
