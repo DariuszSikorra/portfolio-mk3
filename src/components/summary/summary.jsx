@@ -13,7 +13,10 @@ const Summary = () => {
           <strong>adventure</strong> during studies by using C++, creating a
           simulations of heat flow in solid bodies. I am looking for
           opportunities to learn in a <strong>professional</strong> development
-          environment as a front-end developer. My goal is to become a front-end
+          environment as a front-end developer. 
+          <br/>
+          <br/>
+          My goal is to become a front-end
           developer using the <strong>latest</strong> technologies.
         </p>
       </div>

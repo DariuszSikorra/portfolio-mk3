@@ -9,9 +9,9 @@ import Main from "./components/main/main";
 function App() {
   const bgPoints = {
     startingPoint:
-      "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, white 40%)",
+      "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, rgb(178, 184, 218) 40%)",
     endingPoint:
-      "linear-gradient(-35deg, black 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, white 40.5%)"
+      "linear-gradient(-35deg, black 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, rgb(178, 184, 218) 40.5%)"
   };
   const bgAnimation = useSpring({
     from: {

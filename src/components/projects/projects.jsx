@@ -1,7 +1,7 @@
 import React from "react";
-import "./projects.scss"
+import "./projects.scss";
 
-import projects from "../../assets/images/projects.jpg"
+import projects from "../../assets/images/projects.jpg";
 
 const Projects = () => {
   return (
@@ -9,19 +9,16 @@ const Projects = () => {
       <div className="main__textContainer main__textContainer--projects">
         <h1>Projects</h1>
         <p>
-          I write frontend applications in the React.js environment, using the
-          latest solutions. I use libraries such as react-router-dom,
-          react-spring and many others (depending on the given project). I am
-          currently learning to implement technologies such as:
-          <ul> 
-            <li>Typescript</li>
-            <li>GraphQl</li>
-            <li>Redux</li>
-          </ul>
+          I am currently working on projects written with TypeScript in
+          React.js. <br />
+          <br/>
+          The list of projects with photos will be added soon. <br /><br/>
+          All projects and descriptions can be found on my github account (link
+          in the contact tab).
         </p>
       </div>
       <div className="main__photoContainer main__photoContainer--projects">
-        <img src={projects} alt=""/>
+        <img src={projects} alt="" />
       </div>
     </>
   );

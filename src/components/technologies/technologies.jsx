@@ -29,24 +29,24 @@ const Technologies = () => {
               <th>Dev Tools</th>
             </tr>
             <tr>
-              <td>HTML</td>
-              <td>Css and Sass</td>
+              <td>HTML5</td>
+              <td>Css3 in Sass</td>
               <td>npm</td>
             </tr>
             <tr>
-              <td>JavaScript ES6+</td>
-              <td>Bootstrap</td>
+              <td>TypeScript with JS ES6+</td>
+              <td>Bootstrap/TailWind</td>
               <td>Chrome Dev Tools</td>
             </tr>
             <tr>
-              <td>React.js</td>
+              <td>React.js 16+</td>
               <td>Adobe Photoshop</td>
               <td>GIT</td>
             </tr>
             <tr>
+              <td>Apollo with GraphQL</td>
               <td></td>
-              <td>AutoCAD for 3D</td>
-              <td></td>
+              <td>MacOS/Windows</td>
             </tr>
           </table>
           <br/>

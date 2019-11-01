@@ -25,7 +25,7 @@ const NavButton = props => {
     background:
       location.pathname === props.route.path
         ? "rgb(140, 140, 140)"
-        : "rgb(255, 255, 255)",
+        : "rgb(178, 184, 218)",
     transform: isClicked ? "scale(1)" : "scale(0.9)"
   });
   //Animation of sliding tab
@@ -34,7 +34,7 @@ const NavButton = props => {
     background:
       location.pathname === props.route.path
         ? "rgb(140, 140, 140)"
-        : "rgb(255, 255, 255)"
+        : "rgb(178, 184, 218)"
   });
 
   const buttonComponent = (

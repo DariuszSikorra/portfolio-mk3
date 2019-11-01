@@ -19,6 +19,7 @@
     p {
       .title__spiningLogo {
         margin: 40px;
+        max-width: 25vw;
         animation: spin 12s linear infinite;
       }
     }
