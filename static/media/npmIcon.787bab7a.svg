@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   id="svg6"
+   sodipodi:docname="npmIcon.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="7.375"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     fill="#444"
+     d="M.32 15.406v5.248h8.736v1.76h6.976v-1.76h15.649V10.159H.321v5.248zm8.735 0v3.488h-1.76v-5.216H5.598v5.216H2.016v-6.976h7.039v3.488zm8.724.006L17.76 18.9l-3.425-.012v1.766h-3.582v-8.736h7.039l-.012 3.494zm12.204-.006v3.488h-1.76v-5.216h-1.76v5.248l-1.76-.038v-5.21h-1.697v5.216h-3.519v-6.976h10.495v3.488zm-15.648 0v1.728h1.634v-3.457h-1.634v1.728z"
+     id="path2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <rdf:Description
+         about="https://iconscout.com/legal#licenses"
+         dc:title="npm"
+         dc:description="npm"
+         dc:publisher="Iconscout"
+         dc:date="2017-09-24"
+         dc:format="image/svg+xml"
+         dc:language="en">
+        <dc:creator>
+          <rdf:Bag>
+            <rdf:li>Vorillaz</rdf:li>
+          </rdf:Bag>
+        </dc:creator>
+      </rdf:Description>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#000000;stroke-width:0.13559322"
+     d="M 9.0847458,21.437288 V 20.555932 H 4.7457627 0.40677966 V 15.40339 10.250847 H 16 31.59322 v 5.152543 5.152542 H 23.79661 16 v 0.881356 0.881356 H 12.542373 9.0847458 Z m 5.2881352,-1.627119 v -0.881355 h 1.674465 1.674464 l 0.08755,-1.322034 c 0.04815,-0.727119 0.08786,-2.31356 0.08825,-3.525424 l 7.01e-4,-2.20339 h -3.59322 -3.593221 v 4.40678 4.406779 h 1.830509 1.830508 z M 5.6949153,16.352542 V 13.776271 H 6.440678 7.1864407 v 2.576271 2.576272 H 8.1355932 9.0847458 V 15.40339 11.877966 H 5.4915254 1.8983051 v 3.525424 3.525424 h 1.8983051 1.8983051 z m 17.3559317,0 v -2.576271 h 0.81356 0.813559 v 2.576271 2.576272 h 0.949153 0.949152 v -2.576272 -2.576271 h 0.81356 0.813559 v 2.576271 2.576272 h 0.949152 0.949153 V 15.40339 11.877966 h -5.355932 -5.355932 v 3.525424 3.525424 h 1.830508 1.830508 z"
+     id="path3715"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#000000;stroke-width:0.13559322"
+     d="m 14.372881,15.40339 v -1.627119 h 0.745763 0.745763 v 1.627119 1.627118 h -0.745763 -0.745763 z"
+     id="path3717"
+     inkscape:connector-curvature="0" />
+</svg>
