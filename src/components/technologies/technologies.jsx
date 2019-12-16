@@ -12,7 +12,34 @@ import reduxIcon from "../../assets/techIcons/reduxIcon.svg";
 import sassIcon from "../../assets/techIcons/sassIcon.svg";
 import typescriptIcon from "../../assets/techIcons/typescriptIcon.svg";
 
+import { makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+    overflowX: "auto"
+  },
+  table: {
+    minWidth: 650
+  },
+  // cell: {
+  //   align: "center"
+  // }
+});
+
+
+
+
+
 const Technologies = () => {
+  const classes = useStyles();
+
   return (
     <>
       <div className="main__textContainer main__textContainer--technologies">
@@ -21,36 +48,51 @@ const Technologies = () => {
           I am a novice developer constantly broadening my horizons. Here are
           the main technologies I use:
           <br />
-          <br/>
-          <table>
-            <tr>
-              <th>Front-end</th>
-              <th>Design</th>
-              <th>Dev Tools</th>
-            </tr>
-            <tr>
-              <td>HTML5</td>
-              <td>Css3 in Sass</td>
-              <td>npm</td>
-            </tr>
-            <tr>
-              <td>TypeScript with JS ES6+</td>
-              <td>Bootstrap/TailWind</td>
-              <td>Chrome Dev Tools</td>
-            </tr>
-            <tr>
-              <td>React.js 16+</td>
-              <td>Adobe Photoshop</td>
-              <td>GIT</td>
-            </tr>
-            <tr>
-              <td>Apollo with GraphQL</td>
-              <td></td>
-              <td>MacOS/Windows</td>
-            </tr>
-          </table>
-          <br/>
-          I am intrested in all technologies that can improve my workflow.
+          <br />
+          <Paper className={classes.root}>
+            <Table className={classes.table} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell className={classes.cell}>Front-end</TableCell>
+                  <TableCell className={classes.cell}>Design</TableCell>
+                  <TableCell className={classes.cell}>Dev Tools</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell className={classes.cell}>HTML5</TableCell>
+                  <TableCell className={classes.cell}>Css3 in Sass</TableCell>
+                  <TableCell className={classes.cell}>npm</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className={classes.cell}>
+                    TypeScript with JS ES6+
+                  </TableCell>
+                  <TableCell className={classes.cell}>
+                    Bootstrap/TailWind
+                  </TableCell>
+                  <TableCell className={classes.cell}>
+                    Chrome Dev Tools
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className={classes.cell}>React.js 16+</TableCell>
+                  <TableCell className={classes.cell}>
+                    Adobe Photoshop
+                  </TableCell>
+                  <TableCell className={classes.cell}>GIT</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className={classes.cell}>
+                    Apollo with GraphQL
+                  </TableCell>
+                  <TableCell className={classes.cell}></TableCell>
+                  <TableCell className={classes.cell}>MacOS/Windows</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Paper>
+          <br />I am intrested in all technologies that can improve my workflow.
         </p>
       </div>
       <div className="main__photoContainer main__photoContainer--technologies">

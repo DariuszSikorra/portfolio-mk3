@@ -3,6 +3,8 @@ import "./projects.scss";
 
 import projects from "../../assets/images/projects.jpg";
 
+
+
 const Projects = () => {
   return (
     <>
