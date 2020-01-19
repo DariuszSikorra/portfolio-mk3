@@ -1,17 +1,4 @@
 @media (max-width: calc(768px)) {
-  .main__textContainer--technologies {
-    p {
-      table {
-        margin: auto;
-        tr {
-          th {
-            border-bottom: 2px solid black;
-            padding: 0.3em;
-          }
-        }
-      }
-    }
-  }
   .main__photoContainer--technologies {
     height: 100%;
     display: flex;
@@ -48,7 +35,7 @@
       align-content: center;
       margin: auto;
       animation: spin 30s linear infinite;
-      @include on-circle($item-count: 9, $circle-size: 12em, $item-size: 3em);
+      @include on-circle($item-count: 9, $circle-size: 11em, $item-size: 3em);
 
       img {
         display: block;
@@ -65,19 +52,6 @@
 }
 
 @media (min-width: calc(768px + 1px)) {
-  .main__textContainer--technologies {
-    p {
-      table {
-        margin: auto;
-        tr {
-          th {
-            border-bottom: 2px solid black;
-            padding: 0.3em;
-          }
-        }
-      }
-    }
-  }
   .main__photoContainer--technologies {
     height: 100%;
     display: flex;
@@ -87,7 +61,7 @@
       width: $circle-size;
       height: $circle-size;
       list-style: none;
-
+      padding: 1rem;
       > * {
         position: absolute;
         top: 50%;
@@ -114,7 +88,7 @@
       align-content: center;
       margin: auto;
       animation: spin 30s linear infinite;
-      @include on-circle($item-count: 9, $circle-size: 24em, $item-size: 6em);
+      @include on-circle($item-count: 9, $circle-size: 20em, $item-size: 5em);
 
       img {
         display: block;

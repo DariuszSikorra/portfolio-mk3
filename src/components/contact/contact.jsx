@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import "./contact.scss";
+import React from "react";
+import EmailForm from "./EmailForm/emailForm";
+import LinkIcons from "./LinkIcons/linkIcons";
 
-import linkedInRound from "../../assets/contactIcons/linkedInRound.svg";
-import githubRound from "../../assets/contactIcons/githubRound.svg";
-import mailRound from "../../assets/contactIcons/mailRound.svg";
 import contact from "../../assets/images/contact.jpg";
 
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -28,130 +26,71 @@ const useStyles = makeStyles(theme => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2)
+  },
+  container: {
+    display: "flex",
+    flexGrow: 1,
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(4),
+    alignItems: "center",
+    padding: 0,
+    margin: 0
+  },
+  title: {
+    padding: theme.spacing(2),
+    color: "white"
+  },
+  text: {
+    margin: "auto",
+    display: "flex",
+    padding: theme.spacing(2),
+    color: "white",
+    flexDirection: "column"
+  },
+  graphic: {
+    width: 400,
+    padding: theme.spacing(2)
   }
 }));
 
 const Contact = () => {
   const classes = useStyles();
-  const [message, setMessage] = useState(false);
 
   return (
-    <>
-      <div className="main__textContainer main__textContainer--contact">
-        <h1>Contact</h1>
-        <p>
+    <Grid className={classes.container} container>
+      <Grid className={classes.graphic} xs={12} sm={6} item>
+        <Paper
+          style={{
+            width: "100%",
+            height: "500px",
+            backgroundImage: `url(${contact})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover"
+          }}
+          elevation="13"
+        />
+      </Grid>
+      <Grid className={classes.title} xs={12} sm={6} item>
+        <Typography component="h1" variant="h2" align="center">
+          Contact
+        </Typography>
+      </Grid>
+      <Grid className={classes.text} item>
+        <Typography component="h5" variant="h5" align="center">
           Wanna get in touch or talk about a projects? Feel free to contact me:
-          {message ? (
-            <form className={classes.form} noValidate>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <TextField
-                    autoComplete="fname"
-                    name="firstName"
-                    variant="outlined"
-                    required
-                    fullWidth
-                    size="small"
-                    id="firstName"
-                    label="First Name"
-                    autoFocus
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    size="small"
-                    id="email"
-                    label="Email Address"
-                    name="email"
-                    autoComplete="email"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    size="small"
-                    multiline={true}
-                    rows="4"
-                    name="message"
-                    label="Message"
-                    type="message"
-                    id="message"
-                    autoComplete="message"
-                  />
-                </Grid>
-              </Grid>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-              >
-                Sign Up
-              </Button>
-            </form>
-          ) : (
-            <table>
-              <tr>
-                <th>
-                  <div>
-                    <img src={mailRound} alt="email" />
-                  </div>
-                </th>
-                <th>
-                  <div>
-                    <span>dariusz.sikorra@gmail.com</span>
-                  </div>
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  <a href="https://www.linkedin.com/in/dariuszsikorra">
-                    <img src={linkedInRound} alt="linkedin" />
-                  </a>
-                </th>
-                <th>
-                  <a href="https://www.linkedin.com/in/dariuszsikorra">
-                    <span>https://www.linkedin.com/in/dariuszsikorra</span>
-                  </a>
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  <a id="link" href="https://github.com/DariuszSikorra">
-                    <img src={githubRound} alt="github" />
-                  </a>
-                </th>
-                <th>
-                  <a id="link" href="https://github.com/DariuszSikorra">
-                    <span>https://github.com/DariuszSikorra</span>
-                  </a>
-                </th>
-              </tr>
-            </table>
-          )}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick={() => setMessage(!message)}
-          >
-            {message ? "Back to contact" : "Send message"}
-          </Button>
-        </p>
-      </div>
-
-      <div className="main__photoContainer main__photoContainer--contact">
-        <img src={contact} alt="" />
-      </div>
-    </>
+        </Typography>
+        <br />
+        <Grid display="flex" direction="row" justify="space-evenly" container>
+          <LinkIcons />
+        </Grid>
+        <br />
+        <Typography component="h5" variant="h5" align="center">
+          Or, send me a message:
+        </Typography>
+        <br/>
+        <EmailForm />
+      </Grid>
+    </Grid>
   );
 };
 

@@ -1,31 +1,55 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { useSpring, animated as a } from "react-spring";
-import Container from '@material-ui/core/Container';
 
-import "./App.scss";
+import { useSpring, animated as a } from "react-spring";
+
+import { makeStyles } from "@material-ui/core/styles";
 import Navigation from "./components/navigation/newNavigation";
 import Main from "./components/main/main";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 
+const useStyles = makeStyles({
+  mainBox: {
+    background: "#424242",
+    display: "flex",
+    flexDirection: "row"
+  },
+  backgroundBox: {
+    flexGrow: 1,
+    height: "100vh",
+    position: "sticky",
+    top: 0
+  },
+  containerBox: {
+    // background: "#fb8c00",
+    minHeight: "100vh"
+  }
+});
 
 function App() {
+  const classes = useStyles();
+
   const bgPoints = {
     startingPoint:
-      "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, orange 40%)",
+      "linear-gradient(-35deg, black 10%, rgb(73, 73, 73) 10% 20%, rgb(112, 112, 112) 20% 30%, rgb(140, 140, 140) 30% 40%, rgb(251, 140, 0) 40%)",
     endingPoint:
-      "linear-gradient(-35deg, black 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, orange 40.5%)"
+      "linear-gradient(-35deg, black 8%, rgb(73, 73, 73) 8% 22%, rgb(112, 112, 112) 22% 28%, rgb(140, 140, 140) 28% 41%, rgb(251, 140, 0) 40.5%)"
   };
   const bgAnimation = useSpring({
     from: {
-      background: bgPoints.startingPoint
+      background: bgPoints.startingPoint,
+      backgroundSize: "100% 100vh",
+      backgroundAttachment: "fixed",
+      backgroundRepeat: "no-repeat", 
     },
     to: async next => {
       while (1) {
         await next({
-          background: bgPoints.endingPoint
+          background: bgPoints.endingPoint,
         });
         await next({
-          background: bgPoints.startingPoint
+          background: bgPoints.startingPoint,
         });
       }
     },
@@ -34,12 +58,16 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <a.div className="app" style={bgAnimation}>
-        <Container>
-          <Navigation />
-          <Main />
-        </Container>
-      </a.div>
+      <Box className={classes.mainBox}>
+        <Box sticky className={classes.backgroundBox} />
+        <a.div style={bgAnimation}>
+          <Container fixed maxWidth="md" className={classes.containerBox}>
+            <Navigation />
+            <Main />
+          </Container>
+        </a.div>
+        <Box className={classes.backgroundBox} />
+      </Box>
     </Router>
   );
 }
