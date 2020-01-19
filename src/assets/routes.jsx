@@ -3,7 +3,7 @@ import Home from "../components/home/home";
 import Interests from "../components/interests/interests";
 import Projects from "../components/projects/projects";
 import Summary from "../components/summary/summary";
-import Technologies from "../components/technologies/technologies";
+import Technologies from "../components/technologies/newTechnologies";
 
 export const routes = [
   {
