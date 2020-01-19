@@ -39,7 +39,7 @@ function App() {
   const bgAnimation = useSpring({
     from: {
       background: bgPoints.startingPoint,
-      backgroundSize: "100% 100vh",
+      backgroundSize: "auto",
       backgroundAttachment: "fixed",
       backgroundRepeat: "no-repeat", 
     },
