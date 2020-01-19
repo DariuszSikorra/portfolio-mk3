@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f10c1f1acc6775ff6e791591304b46f",
+    "revision": "cd141a6af3eb6981d3a9a70229a3a9a9",
     "url": "/portfolio-mk3/index.html"
   },
   {
-    "revision": "254df9e0637a27d45f45",
-    "url": "/portfolio-mk3/static/css/main.1cf03851.chunk.css"
+    "revision": "4a6a72603b693da3098f",
+    "url": "/portfolio-mk3/static/css/main.e834ae10.chunk.css"
   },
   {
-    "revision": "8fd3b3ba98725545e4e6",
-    "url": "/portfolio-mk3/static/js/2.47aa74be.chunk.js"
+    "revision": "1f7f61b69f49e13d6987",
+    "url": "/portfolio-mk3/static/js/2.a2108c52.chunk.js"
   },
   {
-    "revision": "254df9e0637a27d45f45",
-    "url": "/portfolio-mk3/static/js/main.dfcc287c.chunk.js"
+    "revision": "2f915040f1240a60f4e49f29679e131c",
+    "url": "/portfolio-mk3/static/js/2.a2108c52.chunk.js.LICENSE"
   },
   {
-    "revision": "57bfdc41466e3927475b",
-    "url": "/portfolio-mk3/static/js/runtime-main.eab1ac9a.js"
+    "revision": "4a6a72603b693da3098f",
+    "url": "/portfolio-mk3/static/js/main.29d4a74d.chunk.js"
+  },
+  {
+    "revision": "65163f4ac1a14995e14b",
+    "url": "/portfolio-mk3/static/js/runtime-main.8ce9dee8.js"
   },
   {
     "revision": "f44435d58a5c488964c6979583dc25a3",
@@ -28,8 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-mk3/static/media/css3Icon.7ca664e1.svg"
   },
   {
-    "revision": "1baf7687f978d8cee561f1e78873c185",
-    "url": "/portfolio-mk3/static/media/githubRound.1baf7687.svg"
+    "revision": "43539c3534f23efa0158b54b2ef271a6",
+    "url": "/portfolio-mk3/static/media/dawexpolScreen.43539c35.jpg"
+  },
+  {
+    "revision": "3577e67a2625945dbf2bfd6d37fcd23a",
+    "url": "/portfolio-mk3/static/media/endomondoCloneScreen.3577e67a.jpg"
   },
   {
     "revision": "e6990cd71a262e8ebc7e102181da5bcc",
@@ -50,14 +58,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bbc5738c1aefe99a0df9e0fe479ba1a0",
     "url": "/portfolio-mk3/static/media/jsIcon.bbc5738c.svg"
-  },
-  {
-    "revision": "e5289347c3de259559fcd065ca39dfb4",
-    "url": "/portfolio-mk3/static/media/linkedInRound.e5289347.svg"
-  },
-  {
-    "revision": "e470d90543b3b5cbc7d56d5a3fde878b",
-    "url": "/portfolio-mk3/static/media/mailRound.e470d905.svg"
   },
   {
     "revision": "787bab7aac46388c0586f64e70c62508",
@@ -82,6 +82,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "639cffb9c0905f78c298d885fdcd1de9",
     "url": "/portfolio-mk3/static/media/sassIcon.639cffb9.svg"
+  },
+  {
+    "revision": "a7c328ce795ff31e62b556990e6e5683",
+    "url": "/portfolio-mk3/static/media/spacexScreen.a7c328ce.jpg"
+  },
+  {
+    "revision": "cdb3f48945c2a3e47ef71770a6065a38",
+    "url": "/portfolio-mk3/static/media/todolistScreen.cdb3f489.jpg"
   },
   {
     "revision": "6268d13f42fee2f616da73604096c737",
