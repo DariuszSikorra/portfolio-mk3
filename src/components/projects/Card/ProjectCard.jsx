@@ -46,6 +46,8 @@ const ProjectCard = props => {
             target="_blank"
             size="small"
             className={classes.button}
+            variant="contained"
+            color="primary"
           >
             Github
           </Button>
@@ -57,6 +59,8 @@ const ProjectCard = props => {
             target="_blank"
             size="small"
             className={classes.button}
+            variant="contained"
+            color="primary"
           >
             Website
           </Button>

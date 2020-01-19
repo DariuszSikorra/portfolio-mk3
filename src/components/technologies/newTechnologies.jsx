@@ -117,12 +117,12 @@ const Technologies = () => {
         </Typography>
         <br />
         <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table">
-            <TableHead>
+          <Table className={classes.table} aria-label="simple table" size="small" >
+            <TableHead component="thead" >
               <TableRow>
-                <TableCell align="center">Front-end</TableCell>
-                <TableCell align="center">Design</TableCell>
-                <TableCell align="center">Dev Tools</TableCell>
+                <TableCell align="center"><strong>Front-end</strong></TableCell>
+                <TableCell align="center"><strong>Design</strong></TableCell>
+                <TableCell align="center"><strong>Dev Tools</strong></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
