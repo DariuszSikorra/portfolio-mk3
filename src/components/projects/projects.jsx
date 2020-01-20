@@ -16,10 +16,16 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexGrow: 1,
     paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(4)
+  },
+  textPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
     alignItems: "center",
-    padding: 0,
-    margin: 0
+    padding: theme.spacing(2),
   },
   title: {
     padding: theme.spacing(2),
@@ -60,21 +66,26 @@ const Projects = () => {
         />
       </Grid>
       <Grid className={classes.title} xs={12} sm={6} item>
-        <Typography component="h1" variant="h2" align="center">
-          Projects
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h1" variant="h2" align="center">
+            Projects
+          </Typography>
+        </Paper>
       </Grid>
       <Grid className={classes.text} item>
-        <Typography component="h5" variant="h5" align="center">
-          I am currently working on projects written with TypeScript in
-          React.js. <br />
-          <br />I presented the most interesting projects in the following
-          cards. All this projects and many more can be found on my{" "}
-          <Link key="contact" to={"/contact"}>
-            github account
-          </Link>
-          .
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h5" variant="h5" align="center">
+            I am currently working on projects written with TypeScript in
+            React.js. <br />
+            <br />
+            This are my most interesting projects in the following cards. All
+            this projects and many more can be found on my{" "}
+            <Link key="contact" to={"/contact"}>
+              github account
+            </Link>
+            .
+          </Typography>
+        </Paper>
       </Grid>
       <Grid
         container

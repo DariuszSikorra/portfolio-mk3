@@ -29,16 +29,16 @@ export const routes = [
   },
   {
     id: 4,
-    name: "Interests",
-    path: "/interests",
-    component: Interests,
+    name: "Projects",
+    path: "/projects",
+    component: Projects,
     exact: false
   },
   {
     id: 5,
-    name: "Projects",
-    path: "/projects",
-    component: Projects,
+    name: "Interests",
+    path: "/interests",
+    component: Interests,
     exact: false
   },
   {

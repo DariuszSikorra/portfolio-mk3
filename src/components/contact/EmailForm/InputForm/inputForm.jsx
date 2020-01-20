@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import emailjs from "emailjs-com";
 
@@ -15,6 +15,10 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(2, 0, 2)
+  },
+  textPaper: {
+    padding: theme.spacing(2, 2, 0, 2),
+    backgroundColor: "white"
   }
 }));
 
@@ -29,21 +33,12 @@ const InputForm = props => {
     errors,
     touched,
     handleChange,
-    isValid,
-    // setFieldTouched,
+    isValid
   } = props;
   console.table(props);
 
-  //change of name, email, message
-  // const change = (name, e) => {
-  //   e.persist();
-  //   handleChange(e);
-  //   setFieldTouched(name, true, false);
-  // };
-
-
   //Emailjs element witch send emails
-  const sendEmail = (e) => {
+  const sendEmail = e => {
     e.preventDefault();
 
     const templateParams = {
@@ -62,103 +57,116 @@ const InputForm = props => {
       .then(
         result => {
           // console.log(result.text);
-          setEmailSent(true)
+          setEmailSent(true);
         },
         error => {
           // console.log(error.text);
-          setErrorOccurred(true)
+          setErrorOccurred(true);
         }
       );
-  }
+  };
 
   return (
     <form onSubmit={sendEmail}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <TextField
-            variant="outlined"
-            size="small"
-            type="text"
-            name="name"
-            helperText={touched.name ? errors.name : ""}
-            error={Boolean(errors.name)}
-            value={name}
-            onChange={handleChange}
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <NameIcon />
-                </InputAdornment>
-              )
-            }}
-          />
-          <div>{Boolean(errors.name) ? errors.name : ""}</div>
+      <Paper variant="outlined" className={classes.textPaper}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <TextField
+              variant="outlined"
+              label="Name"
+              size="small"
+              type="text"
+              name="name"
+              helperText={touched.name ? errors.name : ""}
+              error={Boolean(errors.name)}
+              value={name}
+              onChange={handleChange}
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <NameIcon />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <div>{Boolean(errors.name) ? errors.name : ""}</div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <TextField
+              variant="outlined"
+              label="Email"
+              size="small"
+              type="email"
+              name="email"
+              helperText={touched.email ? errors.email : ""}
+              error={Boolean(errors.email)}
+              fullWidth
+              value={email}
+              onChange={handleChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailIcon />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <div>{Boolean(errors.email) ? errors.email : ""}</div>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
+              label="Message"
+              size="small"
+              multiline={true}
+              rows="5"
+              name="message"
+              error={Boolean(errors.message)}
+              fullWidth
+              type="message"
+              value={message}
+              onChange={handleChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MessageIcon />
+                  </InputAdornment>
+                )
+              }}
+            />
+            <div>{errors.password}</div>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <TextField
-            variant="outlined"
-            size="small"
-            type="email"
-            name="email"
-            helperText={touched.email ? errors.email : ""}
-            error={Boolean(errors.email)}
-            fullWidth
-            value={email}
-            onChange={handleChange}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <EmailIcon />
-                </InputAdornment>
-              )
-            }}
-          />
-          <div>{Boolean(errors.email) ? errors.email : ""}</div>
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            variant="outlined"
-            size="small"
-            multiline={true}
-            rows="5"
-            name="message"
-            error={Boolean(errors.message)}
-            fullWidth
-            type="message"
-            value={message}
-            onChange={handleChange}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <MessageIcon />
-                </InputAdornment>
-              )
-            }}
-          />
-          <div>{errors.password}</div>
-        </Grid>
-      </Grid>
-      {emailSent && <Grid>
-        <Paper variant="outlined" size="small" color="primary">
-          <Typography align="center" color="primary" >Your e-mail has been sent!</Typography>
-        </Paper>
-      </Grid>}
-      {errorOccurred && <Grid>
-        <Paper variant="outlined" size="small" color="primary">
-          <Typography align="center" color="secondary" >Something went wrong!</Typography>
-        </Paper>
-      </Grid>}
-      <Button
-        type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
-        disabled={!isValid}
-        className={classes.submit}
-      >
-        Send
-      </Button>
+        {emailSent && (
+          <Grid>
+            <Paper variant="outlined" size="small" color="primary">
+              <Typography align="center" color="primary">
+                Your e-mail has been sent!
+              </Typography>
+            </Paper>
+          </Grid>
+        )}
+        {errorOccurred && (
+          <Grid>
+            <Paper variant="outlined" size="small" color="primary">
+              <Typography align="center" color="secondary">
+                Something went wrong!
+              </Typography>
+            </Paper>
+          </Grid>
+        )}
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          disabled={!isValid}
+          className={classes.submit}
+        >
+          Send
+        </Button>
+      </Paper>
     </form>
   );
 };

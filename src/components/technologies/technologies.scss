@@ -35,7 +35,7 @@
       align-content: center;
       margin: auto;
       animation: spin 30s linear infinite;
-      @include on-circle($item-count: 9, $circle-size: 11em, $item-size: 3em);
+      @include on-circle($item-count: 9, $circle-size: 17em, $item-size: 3em);
 
       img {
         display: block;

@@ -12,18 +12,21 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(4),
-    alignItems: "center",
     padding: 0,
     margin: 0
   },
+  textPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    color: "white",
+    justifyContent: "center",
+    height: "100%",
+    display: "flex",
+    alignItems: "center"
+  },
   title: {
     padding: theme.spacing(2),
-    color: "white"
   },
   text: {
-    margin: "auto",
-    display: "flex",
-    color: "white"
   },
   graphic: {
     width: 400,
@@ -57,12 +60,17 @@ const Home = () => {
         />
       </Grid>
       <Grid xs={12} sm={6} className={classes.title} item>
-        <Typography component="h1" variant="h2" align="center">
-          Dariusz Sikorra
-        </Typography>
-        <Typography component="h2" variant="h4" align="center">
-          Front-end Developer React
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Grid component="div">
+            <Typography component="h1" variant="h2" align="center">
+              Dariusz Sikorra
+            </Typography>
+            <br/>
+            <Typography component="h2" variant="h4" align="center">
+              Front-end Developer React
+            </Typography>
+          </Grid>
+        </Paper>
       </Grid>
     </Grid>
   );

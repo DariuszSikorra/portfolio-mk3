@@ -9,29 +9,28 @@ import Paper from "@material-ui/core/Paper";
 const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
-    flexGrow: 1,
     paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(4)
+  },
+  textPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
     alignItems: "center",
-    padding: 0,
-    margin: 0
+    padding: theme.spacing(2),
   },
   title: {
     padding: theme.spacing(2),
-    color: "white"
   },
   text: {
-    margin: "auto",
-    display: "flex",
     padding: theme.spacing(2),
-    color: "white"
-    
   },
   graphic: {
     width: 400,
     padding: theme.spacing(2)
   },
-  paper: {}
 }));
 
 const Summary = () => {
@@ -52,23 +51,27 @@ const Summary = () => {
         />
       </Grid>
       <Grid className={classes.title} xs={12} sm={6} item>
-        <Typography component="h1" variant="h2" align="center">
-          Summary
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h1" variant="h2" align="center">
+            Summary
+          </Typography>
+        </Paper>
       </Grid>
       <Grid className={classes.text} item>
-        <Typography component="h5" variant="h5" align="center">
-          I graduated from Gdańsk University of Technology in the{" "}
-          <strong>field of physics</strong>. I started my programming{" "}
-          <strong>adventure</strong> during studies by using C++, creating a
-          simulations of heat flow in solid bodies. I am looking for
-          opportunities to learn in a <strong>professional</strong> development
-          environment as a front-end developer.
-          <br />
-          <br />
-          My goal is to become a front-end developer using the{" "}
-          <strong>latest</strong> technologies!
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h5" variant="h5" align="center">
+            I graduated from Gdańsk University of Technology in the{" "}
+            <strong>field of physics</strong>. I started my programming{" "}
+            <strong>adventure</strong> during studies by using C++, creating a
+            simulations of heat flow in solid bodies. I am looking for
+            opportunities to learn in a <strong>professional</strong>{" "}
+            development environment as a front-end developer.
+            <br />
+            <br />
+            My goal is to become a front-end developer using the{" "}
+            <strong>latest</strong> technologies!
+          </Typography>
+        </Paper>
       </Grid>
     </Grid>
   );

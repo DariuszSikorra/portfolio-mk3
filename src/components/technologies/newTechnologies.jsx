@@ -34,22 +34,22 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: "flex",
-    flexGrow: 1,
     paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(4)
+  },
+  textPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
     alignItems: "center",
-    padding: 0,
-    margin: 0
+    padding: theme.spacing(2)
   },
   title: {
-    padding: theme.spacing(2),
-    color: "white"
+    padding: theme.spacing(2)
   },
   text: {
-    margin: "auto",
-    display: "flex",
-    color: "white",
-    flexDirection: "column",
     padding: theme.spacing(2)
   },
   graphic: {
@@ -92,54 +92,80 @@ const Technologies = () => {
   return (
     <Grid className={classes.container} container>
       <Grid className={classes.graphic} xs={12} sm={6} item>
-        <div className="main__photoContainer main__photoContainer--technologies">
-          <ul class="circle-container">
-            {iconList.map(icon => (
-              <li>
-                <img src={icon} alt="..." />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Paper
+          style={{
+            width: "100%",
+            height: "500px",
+            backgroundPosition: "center"
+          }}
+          variant="outlined"
+          className={classes.textPaper}
+        >
+          <div className="main__photoContainer main__photoContainer--technologies">
+            <ul class="circle-container">
+              {iconList.map(icon => (
+                <li>
+                  <img src={icon} alt="..." />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Paper>
       </Grid>
       <Grid className={classes.title} xs={12} sm={6} item>
-        <Typography component="h1" variant="h2" align="center">
-          Technologies
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h1" variant="h2" align="center">
+            Technologies
+          </Typography>
+        </Paper>
       </Grid>
       <br />
       <br />
       <br />
       <Grid className={classes.text} item>
-        <Typography component="h5" variant="h5" align="center">
-          I am a novice developer constantly broadening my horizons. Here are
-          the main technologies I use:
-        </Typography>
-        <br />
-        <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table" size="small" >
-            <TableHead component="thead" >
-              <TableRow>
-                <TableCell align="center"><strong>Front-end</strong></TableCell>
-                <TableCell align="center"><strong>Design</strong></TableCell>
-                <TableCell align="center"><strong>Dev Tools</strong></TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map(row => (
-                <TableRow key={row.name}>
-                  <TableCell align="center">{row.frontEnd}</TableCell>
-                  <TableCell align="center">{row.design}</TableCell>
-                  <TableCell align="center">{row.devTools}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <br />
-        <Typography component="h5" variant="h5" align="center">
-          I am intrested in all technologies that can improve my workflow.
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Grid component="div">
+            <Typography component="h5" variant="h5" align="center">
+              I am a novice developer constantly broadening my horizons. Here
+              are the main technologies I use:
+            </Typography>
+            <br />
+            <TableContainer component={Paper}>
+              <Table
+                className={classes.table}
+                aria-label="simple table"
+                size="small"
+              >
+                <TableHead component="thead">
+                  <TableRow>
+                    <TableCell align="center">
+                      <strong>Front-end</strong>
+                    </TableCell>
+                    <TableCell align="center">
+                      <strong>Design</strong>
+                    </TableCell>
+                    <TableCell align="center">
+                      <strong>Dev Tools</strong>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map(row => (
+                    <TableRow key={row.name}>
+                      <TableCell align="center">{row.frontEnd}</TableCell>
+                      <TableCell align="center">{row.design}</TableCell>
+                      <TableCell align="center">{row.devTools}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <br />
+            <Typography component="h5" variant="h5" align="center">
+              I am intrested in all technologies that can improve my workflow.
+            </Typography>
+          </Grid>
+        </Paper>
       </Grid>
     </Grid>
   );

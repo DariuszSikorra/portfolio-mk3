@@ -10,47 +10,30 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
-  },
-  form: {
-    width: "100%",
-    marginTop: theme.spacing(3)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2)
-  },
   container: {
     display: "flex",
-    flexGrow: 1,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(4),
+  },
+  textPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
     alignItems: "center",
-    padding: 0,
-    margin: 0
+    padding: theme.spacing(2),
   },
   title: {
     padding: theme.spacing(2),
-    color: "white"
   },
   text: {
-    margin: "auto",
-    display: "flex",
     padding: theme.spacing(2),
-    color: "white",
-    flexDirection: "column"
   },
   graphic: {
     width: 400,
     padding: theme.spacing(2)
-  }
+  },
 }));
 
 const Contact = () => {
@@ -71,24 +54,40 @@ const Contact = () => {
         />
       </Grid>
       <Grid className={classes.title} xs={12} sm={6} item>
-        <Typography component="h1" variant="h2" align="center">
-          Contact
-        </Typography>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Typography component="h1" variant="h2" align="center">
+            Contact
+          </Typography>
+        </Paper>
       </Grid>
-      <Grid className={classes.text} item>
-        <Typography component="h5" variant="h5" align="center">
-          Wanna get in touch or talk about a projects? Feel free to contact me:
-        </Typography>
-        <br />
-        <Grid display="flex" direction="row" justify="space-evenly" container>
-          <LinkIcons />
-        </Grid>
-        <br />
-        <Typography component="h5" variant="h5" align="center">
-          Or, send me a message:
-        </Typography>
-        <br/>
-        <EmailForm />
+      <Grid className={classes.text} xs={12} item>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <Grid component="div">
+            <Typography component="h5" variant="h5" align="center">
+              Wanna get in touch or talk about a projects? Feel free to contact
+              me:
+            </Typography>
+            <br />
+            <Grid
+              display="flex"
+              direction="row"
+              justify="space-evenly"
+              container
+            >
+              <LinkIcons />
+            </Grid>
+            <br />
+            <Typography component="h5" variant="h5" align="center">
+              Or, send me a message:
+            </Typography>
+          </Grid>
+        </Paper>
+      </Grid>
+      <br />
+      <Grid className={classes.text} xs={12} item>
+        <Paper variant="outlined" className={classes.textPaper}>
+          <EmailForm />
+        </Paper>
       </Grid>
     </Grid>
   );

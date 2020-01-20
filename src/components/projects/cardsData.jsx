@@ -38,14 +38,14 @@ const cardsData = [
     image: dawexpolScreen,
     cardTextContent: (
       <>
-        Created for client webpage. React.js based single page
-        business-brochure. Visual maitained by Sass, and react-spring.
+        React.js based single page
+        business-brochure, created for customer. Visual maitained by Sass, and react-spring.
         <br />
         <br />
         Libraries used for this project:
         <ul>
           <li> React-router for routing between pages,</li>
-          <li>React-spring for easy to inplemnt and natural animations,</li>
+          <li>React-spring for easy to implement and natural animations,</li>
           <li>
             React-responsive for dynamic responsiveness of gallery layout.
           </li>
@@ -68,7 +68,7 @@ const cardsData = [
         I wrote the application for the purpose of learning how to use databases
         based on GraphQL.
         <br />
-        The app contains the last 10 rockets fired by SpaceX. The data includes:
+        The data includes:
 
         <ul>
           <li>when the rocket was launched,</li>
@@ -95,12 +95,12 @@ const cardsData = [
         >
           Todo List
         </a>{" "}
-        rewrote into Typescript.
+        rewritten into Typescript.
         <ul>
           <li>
             React.js with create-react-app-typescript as the main js library,
           </li>
-          <li>Typescript for strong type'ing,</li>
+          <li>Typescript for strong typeing,</li>
           <li>
             Sass as a graphic postprocessor for easy page styling and BEM-like
             naming.
