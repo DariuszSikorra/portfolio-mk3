@@ -22,6 +22,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
@@ -56,7 +57,9 @@ const useStyles = makeStyles(theme => ({
     width: 400,
     padding: theme.spacing(2)
   },
-  paper: {}
+  tableContainer: {
+    padding: theme.spacing(2)
+  }
 }));
 
 const iconList = [
@@ -130,36 +133,38 @@ const Technologies = () => {
               are the main technologies I use:
             </Typography>
             <br />
-            <TableContainer component={Paper}>
-              <Table
-                className={classes.table}
-                aria-label="simple table"
-                size="small"
-              >
-                <TableHead component="thead">
-                  <TableRow>
-                    <TableCell align="center">
-                      <strong>Front-end</strong>
-                    </TableCell>
-                    <TableCell align="center">
-                      <strong>Design</strong>
-                    </TableCell>
-                    <TableCell align="center">
-                      <strong>Dev Tools</strong>
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows.map(row => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.frontEnd}</TableCell>
-                      <TableCell align="center">{row.design}</TableCell>
-                      <TableCell align="center">{row.devTools}</TableCell>
+            <Box component="div" className={classes.tableContainer}>
+              <TableContainer component={Paper}>
+                <Table
+                  className={classes.table}
+                  aria-label="simple table"
+                  size="small"
+                >
+                  <TableHead component="thead">
+                    <TableRow>
+                      <TableCell align="center">
+                        <strong>Front-end</strong>
+                      </TableCell>
+                      <TableCell align="center">
+                        <strong>Design</strong>
+                      </TableCell>
+                      <TableCell align="center">
+                        <strong>Dev Tools</strong>
+                      </TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
+                  </TableHead>
+                  <TableBody>
+                    {rows.map(row => (
+                      <TableRow key={row.name}>
+                        <TableCell align="center">{row.frontEnd}</TableCell>
+                        <TableCell align="center">{row.design}</TableCell>
+                        <TableCell align="center">{row.devTools}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
             <br />
             <Typography component="h5" variant="h5" align="center">
               I am intrested in all technologies that can improve my workflow.

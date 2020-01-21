@@ -1,5 +1,3 @@
-## `Work in progress!`
-
 ## Check it out!
 [Portfolio](https://dariuszsikorra.github.io/portfolio-mk3/#/)
 

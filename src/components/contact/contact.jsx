@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(4)
   },
   textPaper: {
     backgroundColor: "rgba(0, 0, 0, 0.05)",
@@ -22,18 +22,18 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     height: "100%",
     alignItems: "center",
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   title: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   text: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   graphic: {
     width: 400,
     padding: theme.spacing(2)
-  },
+  }
 }));
 
 const Contact = () => {
@@ -77,16 +77,19 @@ const Contact = () => {
               <LinkIcons />
             </Grid>
             <br />
-            <Typography component="h5" variant="h5" align="center">
-              Or, send me a message:
-            </Typography>
           </Grid>
         </Paper>
       </Grid>
       <br />
       <Grid className={classes.text} xs={12} item>
         <Paper variant="outlined" className={classes.textPaper}>
+        <Grid component="div">
+          <Typography component="h5" variant="h5" align="center">
+            Or, send me a message:
+          </Typography>{" "}
+          <br />
           <EmailForm />
+        </Grid>
         </Paper>
       </Grid>
     </Grid>

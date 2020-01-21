@@ -109,7 +109,7 @@ function ListItemLink(props) {
 
   return (
     <ListItem button component={renderLink}>
-      <ListItemText primary={props.route.name} />
+      <ListItemText primary={props.route.name} onClick={props.handleDrawerClose} />
     </ListItem>
   );
 }
@@ -174,7 +174,7 @@ const Navigation = () => {
         <Divider />
         <List>
           {routes.map(route => (
-            <ListItemLink route={route}></ListItemLink>
+            <ListItemLink route={route} handleDrawerClose={handleDrawerClose}></ListItemLink>
           ))}
         </List>
         <Divider />

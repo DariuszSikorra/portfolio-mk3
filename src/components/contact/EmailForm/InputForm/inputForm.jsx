@@ -18,7 +18,6 @@ const useStyles = makeStyles(theme => ({
   },
   textPaper: {
     padding: theme.spacing(2, 2, 0, 2),
-    backgroundColor: "white"
   }
 }));
 

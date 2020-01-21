@@ -11,7 +11,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles({
   mainBox: {
-    background: "#424242",
+    background: "#494953",
     display: "flex",
     flexDirection: "row"
   },
@@ -22,7 +22,6 @@ const useStyles = makeStyles({
     top: 0
   },
   containerBox: {
-    // background: "#fb8c00",
     minHeight: "100vh"
   }
 });
@@ -59,7 +58,7 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Box className={classes.mainBox}>
-        <Box sticky className={classes.backgroundBox} />
+        <Box className={classes.backgroundBox} />
         <a.div style={bgAnimation}>
           <Container fixed maxWidth="md" className={classes.containerBox}>
             <Navigation />
