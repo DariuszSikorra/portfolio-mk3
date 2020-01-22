@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2, 0, 2)
   },
   textPaper: {
-    padding: theme.spacing(2, 2, 0, 2),
+    padding: theme.spacing(2, 2, 0, 2)
   }
 }));
 
@@ -160,7 +160,7 @@ const InputForm = props => {
           fullWidth
           variant="contained"
           color="primary"
-          disabled={!isValid}
+          disabled={!isValid || name === ""}
           className={classes.submit}
         >
           Send

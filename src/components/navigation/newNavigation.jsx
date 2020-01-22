@@ -174,7 +174,7 @@ const Navigation = () => {
         <Divider />
         <List>
           {routes.map(route => (
-            <ListItemLink route={route} handleDrawerClose={handleDrawerClose}></ListItemLink>
+            <ListItemLink handleDrawerClose={handleDrawerClose} route={route}></ListItemLink>
           ))}
         </List>
         <Divider />
