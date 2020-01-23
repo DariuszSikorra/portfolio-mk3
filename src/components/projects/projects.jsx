@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
-import { Link } from "react-router-dom";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     height: "100%",
     alignItems: "center",
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   title: {
     padding: theme.spacing(2),
@@ -80,7 +80,12 @@ const Projects = () => {
             <br />
             This are my most interesting projects in the following cards. All
             this projects and many more can be found on my{" "}
-            <Link key="contact" to={"/contact"}>
+            <Link
+              href="https://github.com/DariuszSikorra"
+              key="github"
+              target="_blank"
+              component={Link}
+            >
               github account
             </Link>
             .

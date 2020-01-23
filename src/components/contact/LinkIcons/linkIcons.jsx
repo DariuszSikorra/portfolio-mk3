@@ -23,6 +23,7 @@ const LinkIcons = () => {
         variant="body1"
         href="https://www.linkedin.com/in/dariuszsikorra"
         key="linkedIn"
+        target="_blank"
       >
         <Grid
           className={classes.icon}
@@ -41,6 +42,7 @@ const LinkIcons = () => {
         variant="body1"
         href="https://github.com/DariuszSikorra"
         key="github"
+        target="_blank"
       >
         <Grid
           className={classes.icon}

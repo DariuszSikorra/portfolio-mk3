@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   mainBox: {
     background: "#494953",
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
   },
   backgroundBox: {
     flexGrow: 1,
