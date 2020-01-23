@@ -15,7 +15,7 @@ export const routes = [
   },
   {
     id: 2,
-    name: "Summmary",
+    name: "Summary",
     path: "/summary",
     component: Summary,
     exact: false
