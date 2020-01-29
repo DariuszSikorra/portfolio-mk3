@@ -7,7 +7,7 @@ import { routes } from "../../assets/routes";
 
 import ErrorPage from "../errorPage/errorPage";
 
-const Main = (p) => {
+const Main = () => {
   const { location } = useRouter();
   const transitionAnimation = useTransition(
     location,

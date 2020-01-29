@@ -26,13 +26,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    overflowX: "auto"
-  },
-  table: {
-    // minWidth: 650
-  },
   container: {
     display: "flex",
     paddingTop: theme.spacing(10),
@@ -99,12 +92,12 @@ const Technologies = () => {
           style={{
             width: "100%",
             height: "500px",
-            backgroundPosition: "center"
+            backgroundPosition: "center",
           }}
           variant="outlined"
           className={classes.textPaper}
         >
-          <div className="main__photoContainer main__photoContainer--technologies">
+          <div className="main__photoContainer">
             <ul class="circle-container">
               {iconList.map(icon => (
                 <li>

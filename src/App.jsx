@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   mainBox: {
     background: "#494953",
     display: "flex",
-    flexDirection: "row",
   },
   backgroundBox: {
     flexGrow: 1,
@@ -22,7 +21,7 @@ const useStyles = makeStyles({
     top: 0
   },
   containerBox: {
-    minHeight: "100vh"
+    minHeight: "100vh",
   }
 });
 
@@ -40,7 +39,7 @@ function App() {
       background: bgPoints.startingPoint,
       backgroundSize: "auto",
       backgroundAttachment: "fixed",
-      backgroundRepeat: "no-repeat", 
+      backgroundRepeat: "no-repeat"
     },
     to: async next => {
       while (1) {
@@ -60,7 +59,7 @@ function App() {
       <Box className={classes.mainBox}>
         <Box className={classes.backgroundBox} />
         <a.div style={bgAnimation}>
-          <Container fixed maxWidth="md" className={classes.containerBox}>
+          <Container maxWidth="md" className={classes.containerBox}>
             <Navigation />
             <Main />
           </Container>

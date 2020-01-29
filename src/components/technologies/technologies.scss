@@ -1,5 +1,5 @@
 @media (max-width: calc(768px)) {
-  .main__photoContainer--technologies {
+  .main__photoContainer {
     height: 100%;
     display: flex;
 
@@ -52,7 +52,7 @@
 }
 
 @media (min-width: calc(768px + 1px)) {
-  .main__photoContainer--technologies {
+  .main__photoContainer {
     height: 100%;
     display: flex;
 
